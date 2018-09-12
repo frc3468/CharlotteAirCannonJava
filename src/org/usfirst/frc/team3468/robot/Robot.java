@@ -13,6 +13,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team3468.robot.commands.ArcadeDrive;
+import org.usfirst.frc.team3468.robot.subsystems.Compressor;
 import org.usfirst.frc.team3468.robot.subsystems.Drivetrain;
 import org.usfirst.frc.team3468.robot.subsystems.Turret;
 
@@ -26,6 +27,7 @@ import org.usfirst.frc.team3468.robot.subsystems.Turret;
 public class Robot extends TimedRobot {
 	public static final Drivetrain drivetrain = new Drivetrain();
 	public static final Turret turret = new Turret();
+	public static final Compressor compressor = new Compressor();
 	public static OI m_oi;
 
 

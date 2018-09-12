@@ -8,8 +8,10 @@
 package org.usfirst.frc.team3468.robot;
 
 import org.usfirst.frc.team3468.robot.commands.FireCannon;
+import org.usfirst.frc.team3468.robot.commands.ToggleCompressor;
 
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
@@ -46,13 +48,16 @@ public class OI {
 	// until it is finished as determined by it's isFinished method.
 	// button.whenReleased(new ExampleCommand());
 	
-	public Joystick gamepad = new Joystick(RobotMap.joystickPort);
+	public XboxController gamepad = new XboxController(RobotMap.joystickPort);
 	
 	Button fireLeftCannon = new JoystickButton(gamepad, RobotMap.leftCannonFireButton);
 	Button fireRightCannon = new JoystickButton(gamepad, RobotMap.rightCannonFireButton);
 	
+	Button compressorButton = new JoystickButton(gamepad, RobotMap.toggleCompressorButton);
+	
 	public OI() {
 		fireLeftCannon.whenPressed(new FireCannon(FireCannon.LEFT));
 		fireRightCannon.whenPressed(new FireCannon(FireCannon.RIGHT));
+		compressorButton.toggleWhenPressed(new ToggleCompressor());
 	}
 }

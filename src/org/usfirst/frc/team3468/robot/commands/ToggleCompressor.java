@@ -13,7 +13,7 @@ public class ToggleCompressor extends Command {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     	requires(Robot.compressor);
-    	setTimeout(12.0);
+    	setTimeout(10.0);
     }
 
     // Called just before this Command runs the first time

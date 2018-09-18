@@ -36,6 +36,8 @@ public class RobotMap {
 	public static int frontRightDrivetrainMotor = 3; // PWM
 	
 	public static int cannonLiftMotor = 8; // PWM
+	public static int lowerLimitSwitch = 0; // Digital IO
+	public static int upperLimitSwitch = 1; // Digital IO
 	
 	public static int leftCannonPWM = 6; // Solenoid
 	public static int rightCannonPWM = 5; // Solenoid
